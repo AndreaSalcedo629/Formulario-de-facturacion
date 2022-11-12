@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulario de facturación</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">FORMULARIO FACTURACIÓN</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+     
+          
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          
+        </form>
+      </div>
+    </nav>
+    <header>
+      <div>
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h1 class="text-center">FORMULARIO DE REGISTRO DE FACTURACIÓN</h1>
+              <p class="text-center">Autor: Mayerly Andrea Salcedo Barrera.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section>
+  <div class="container">
+        <div class="card">
+          <div class="card-header">
+              <div>
+                <h3><center>FORMULARIO DE FACTURACIÓN DE UNA EMPRESA</center> </h3>
+              </div>
+              <br>
+            <form>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="number">Numero de factura</label>
+                    <input type="number" class="form-control" id="number" onkeypress="return onlyNums(event)" required />
+					 
+                  </div>
+			
+                  <div class="form-group col-md-6">
+                    <label for="customer">Nombre del cliente</label>
+                    <input type="text" class="form-control" id="customer" onkeypress="return soloLetras(event)" onblur="limpia()" >
+                  </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-10">
+                      <label for="number">Fecha de Facturacion</label>
+                      <input type="date" class="form-control" id="dateBill" >
+                    </div>
+                     <div class="col-md-2">
+    <label for="typePay" class="form-label">TIPO PAGO</label>
+    <select class="form-select" id="typePay" required>
+      <option selected disabled value="">Choose...</option>
+      <option>credito</option>
+		<option>cuotas</option>
+		<option>credito</option>
+    </select>
+						
+                      </div>   
+						
+                    </div>
+					
+                    
+                  <div class="form-group">
+                    <label for="valueBill">Total a Pagar</label>
+                    <input type="number" class="form-control" id="valueBill"  onkeypress="return onlyNums(event)" required>
+                  </div>
+                  <td><a id="adicionar" name="adicionar"  class="btn btn-success" >Agregar</a></td>
+                  <td><a id="Eliminar" name="Eliminar"  class="btn btn-danger" >Eliminar</a></td>
+              </form>
+            
+          </div>
+      
+          <div class="card-body text-center" id="card-body">
+            <div class='table-responsive'> 
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Numero de factura</th>
+                    <th scope="col">nombre del Cliente</th>
+                    <th scope="col">Fecha de facturacion</th>
+                    <th scope="col">Tipo de Pago</th>
+                    <th scope="col">Valor pago</th>
+                  </tr>
+                </thead>
+                <tbody id="contenido-tb">
+                 
+													<td>number</td>
+													<td>customer</td>
+													<td>dateBill</td>
+                          <td>typePay</td>
+                          <td>valueBill</td>
+                          
+                </tbody>
+              </table>
+            </div>
+      
+          </div>
+        </div>
+        </div>	
+    <footer class="text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+         
+          </div>
+        </div>
+      </div>
+		
+    </footer>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+    <script src="js/jquery-3.4.1.min.js"></script> 
+    <!-- Include all compiled plugins (below), or include individual files as needed --> 
+    <script src="js/popper.min.js"></script> 
+    <script src="js/bootstrap-4.4.1.js"></script>
+  <script src="./js/scripts.js"></script>
+  </body>
+</html>
